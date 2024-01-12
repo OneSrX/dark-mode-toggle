@@ -13,13 +13,26 @@ body {
   color: rgb(32, 35, 48);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
   -webkit-user-select: none;
 }
 
-h1 {
+.clicky {
   position: absolute;
+  color: rgb(32, 35, 48);
   top: 38%;
   left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+
+.welcome {
+  position: absolute;
+  color: rgba(255, 255, 255);
+  top: 65%;
+  left: 50%;
+  z-index: 1;
   transform: translate(-50%, -50%);
   font-size: 40px;
 }
