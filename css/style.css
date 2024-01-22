@@ -8,12 +8,12 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .dark-mode {
-  transition: 0.2s;
-  background-color: rgb(32, 35, 48);
+  transition: 0.4s;
+  background-color: #202330;
 }
 
 .switch {
@@ -39,7 +39,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: 0.2s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -50,8 +50,12 @@ body {
   width: 52px;
   left: 8px;
   bottom: 8px;
-  background-color: rgb(32, 35, 48);
-  transition: 0.2s;
+  background-color: #202330;
+  background-image: url("../images/sun.png");
+  background-size: 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
 }
 
 .slider:after {
@@ -61,8 +65,12 @@ body {
   width: 52px;
   left: 8px;
   bottom: 8px;
-  background-color: white;
-  transition: 0.2s;
+  background-color: #ffffff;
+  background-image: url("../images/moon.png");
+  background-size: 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
   opacity: 0;
 }
 
@@ -71,12 +79,12 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(52px);
+  transform: translateX(52px) rotate(90deg);
   opacity: 0;
 }
 
 input:checked + .slider:after {
-  transform: translateX(52px);
+  transform: translateX(52px) rotate(90deg);
   opacity: 1;
 }
 
