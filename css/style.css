@@ -13,15 +13,15 @@ body {
 
 .dark-mode {
   transition: 0.4s;
-  background-color: #202330;
+  background-color: #30333b;
 }
 
 .switch {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120px;
+  transform: translate(-50%, -100%);
+  width: 140px;
   height: 68px;
 }
 
@@ -32,15 +32,34 @@ body {
 }
 
 .slider {
-  position: absolute;
   cursor: pointer;
+  z-index: 1;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #1a1a1a;
   transition: 0.4s;
   border-radius: 34px;
+}
+
+.slider .moon {
+  position: absolute;
+  top: 50%;
+  left: 24%;
+  z-index: -1;
+  max-width: 55px;
+  transform: translate(-50%, -50%);
+}
+
+.slider .sun {
+  position: absolute;
+  top: 50%;
+  left: 76%;
+  z-index: -1;
+  max-width: 55px;
+  transform: translate(-50%, -50%);
 }
 
 .slider:before {
@@ -50,12 +69,11 @@ body {
   width: 52px;
   left: 8px;
   bottom: 8px;
-  background-color: #202330;
-  background-image: url("../images/sun.png");
+  background-color: #ffffff;
   background-size: 45px;
   background-position: center;
   background-repeat: no-repeat;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .slider:after {
@@ -66,25 +84,23 @@ body {
   left: 8px;
   bottom: 8px;
   background-color: #ffffff;
-  background-image: url("../images/moon.png");
   background-size: 45px;
   background-position: center;
   background-repeat: no-repeat;
-  transition: 0.4s;
-  opacity: 0;
+  transition: 0.2s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #1a1a1a;
 }
 
 input:checked + .slider:before {
-  transform: translateX(52px) rotate(90deg);
+  transform: translateX(74px);
   opacity: 0;
 }
 
 input:checked + .slider:after {
-  transform: translateX(52px) rotate(90deg);
+  transform: translateX(74px);
   opacity: 1;
 }
 
